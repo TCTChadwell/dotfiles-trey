@@ -1,15 +1,21 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Swaps and backups
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Don't create backup files
-set nobackup nowritebackup
 
-" Don't create swap files
-set noswapfile
+packadd! dracula_pro
 
-"turn on syntax for custom things
-:syntax on
+syntax enable
 
-" custom colors
-colorscheme monokai_pro
+set number
+
+let g:dracula_bold = 0
+let g:dracula_italic = 0
+let g:dracula_underline = 0
+let g:dracula_undercurl = 0
+let g:dracula_inverse = 0
+
+colorscheme dracula_pro_van_helsing
+
+filetype plugin indent on
+
+set rtp+=/usr/local/opt/fzf
+
+let g:airline#extensions#tabline#enabled = 1

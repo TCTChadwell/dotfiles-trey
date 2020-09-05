@@ -1,7 +1,11 @@
 eval "$(pyenv init -)"
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYENV="true"
-export GOPATH=/Users/treychadwell/nastygoat/go
+eval "$(pyenv virtualenv-init -)"
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+export PYENV_ROOT=/usr/local/var/pyenv
+export PATH=$PATH:/usr/local/Cellar/node/12.11.1/bin
+export GOPATH=$HOME/projects/go
 export PATH=$PATH:$GOPATH/bin
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
