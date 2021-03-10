@@ -16,6 +16,21 @@ colorscheme dracula_pro_van_helsing
 
 filetype plugin indent on
 
+" homebrew fzf
 set rtp+=/usr/local/opt/fzf
 
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+nmap t :bn<cr>
+nmap T :bp<cr>
+
+" Open a new buffer for finding files
+nmap - :Ex<cr>
+
+" trying this one out
+set backspace=indent,eol,start
+
+" set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
